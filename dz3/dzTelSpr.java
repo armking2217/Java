@@ -2,8 +2,8 @@ package dz3;
 
 import jdk.nashorn.api.tree.Tree;
 
-import java.util.HashMap;
-import java.util.TreeSet;
+import java.util.*;
+
 
 public class dzTelSpr {
     public static void main(String[] args) {
@@ -32,6 +32,15 @@ public class dzTelSpr {
         catch(NoNameExeption e){
             e.printStackTrace();
         }
+        /*TreeMap<String,TreeSet<String>> tm=new TreeMap<>();
+        Iterator<TreeSet<String>> cool=first.getpB().values().iterator();
+        while(cool.hasNext()){
+            TreeSet<String> ts=cool.next();
+            if(ts.contains("980192938")) cool.remove();
+            else System.out.println(ts);
+        }
+        first.print();*/
+
     }
 }
 
@@ -43,12 +52,13 @@ class NoNameExeption extends Exception{
 
     }
 }
+
 class phoneBook{
-    private HashMap<String, TreeSet<String>> pB;
+    private TreeMap<String, TreeSet<String>> pB;
     public phoneBook(){
-        pB=new HashMap<>();
+        pB=new TreeMap<>();
     }
-    public phoneBook(HashMap<String, TreeSet<String>> pB){
+    public phoneBook(TreeMap<String, TreeSet<String>> pB){
         this.pB=pB;
     }
     public void get(String lastname) throws NoNameExeption{
@@ -69,6 +79,11 @@ class phoneBook{
             pB.put(lastname,arr);
         }
     }
+
+    public TreeMap<String, TreeSet<String>> getpB() {
+        return pB;
+    }
+
     public void print(){
         System.out.println(pB);
     }
