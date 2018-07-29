@@ -1,0 +1,23 @@
+#btn1 {
+    -fx-font: 14px "serif";
+    -fx-padding: 2;
+    -fx-background-color: black;
+    -fx-text-fill: green;
+}
+
+#btn1:hover {
+    -fx-font: 14px "serif";
+    -fx-padding: 2;
+    -fx-background-color: green;
+    -fx-text-fill: chocolate;
+}
+
+
+#textArea .content {
+        -fx-background-image: url(3.jpg) white;
+        -fx-background-size: stretch ;
+}
+#textArea {
+        -fx-text-fill: RED;
+}
+
